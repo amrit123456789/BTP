@@ -5,6 +5,7 @@ const passport = require('./passport')
 const app = express()
 
 app.set("view engine", "hbs")
+app.set('views', path.join(__dirname, '../views'))
 
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))
