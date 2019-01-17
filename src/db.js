@@ -10,16 +10,10 @@ const db =new seq ( 'btp',
 
 
 const siteuser = db.define('siteuser',{
-    username:{
-        type:seq.STRING,
-        allowNull:false,
-        unique:true
-    },
-    password:{
+    name:{
         type:seq.STRING,
         allowNull:false
     },
-    name:seq.STRING,
     phone_no :{
         type:seq.BIGINT,
         allowNull:false,
@@ -33,7 +27,17 @@ const siteuser = db.define('siteuser',{
         type:seq.STRING,
         allowNull:false,
         unique:true
+    },
+    username:{
+        type:seq.STRING,
+        allowNull:false,
+        unique:true
+    },
+    password:{
+        type:seq.STRING,
+        allowNull:false
     }
+    
 })
 
 db.sync().then(()=>console.log("database is ready"))
