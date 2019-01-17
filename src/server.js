@@ -29,4 +29,4 @@ app.use(passport.session())
 
 app.use('/', require('./routes/pages'))
 
-app.listen(2121, ()=>console.log("website on http://localhost:2121"))
+app.listen(2122, ()=>console.log("website on http://localhost:2121"))

@@ -35,8 +35,8 @@ route.get('/mainpage',(req,res)=>{
 //})})
 
 route.post('/login', passport.authenticate('local', {
-  failureRedirect: '/auth/mainpage',
-  successRedirect: '/pages/mainpage',
+  failureRedirect: '/auth/login',
+  successRedirect: '/auth/mainpage',
   //failureFlash: true
 }))
 
