@@ -11,30 +11,30 @@ const db =new seq ( 'btp',
 
 const siteuser = db.define('siteuser',{
     name:{
-        type:seq.STRING,
+        type:seq.STRING(30),
         allowNull:false
     },
     phone_no :{
-        type:seq.BIGINT,
+        type:seq.STRING(20),
         allowNull:false,
         unique:true
     },
     school:{
-        type:seq.STRING,
+        type:seq.STRING(30),
         allowNull:false
     },
     email:{
-        type:seq.STRING,
+        type:seq.STRING(30),
         allowNull:false,
         unique:true
     },
     username:{
-        type:seq.STRING,
+        type:seq.STRING(30),
         allowNull:false,
         unique:true
     },
     password:{
-        type:seq.STRING,
+        type:seq.STRING(30),
         allowNull:false
     }
     

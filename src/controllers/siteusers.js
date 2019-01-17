@@ -1,22 +1,33 @@
 const Siteuser = require('../db').siteuser
 
 async function createsiteuser (name,phone_no,school,email,username,password) {
-  if (typeof name !== 'text' || name.length < 1) {
-    throw new Error('Name is empty or undefined')
+  if (typeof(name) !== 'string' ){
+    console.log(name)
+    console.log(phone_no)
+    console.log(typeof(school))
+    console.log(typeof(email))
+
+    console.log(typeof(username))
+    console.log(typeof(password))
+
+    throw new Error('Name is not string type')
   }
-  if (typeof phone_no !== 'number' || phone_no.length < 10) {
+  if( name.length < 1) {
+    throw new Error('Name length <1')
+  }
+  if (typeof phone_no !== 'string' || phone_no.length < 10) {
     throw new Error('invalid phone number')
   }
-  if (typeof school !== 'text') {
+  if (typeof school !== 'string') {
     throw new Error('school name not correct')
   }
-  if (typeof email !== 'text') {
+  if (typeof email !== 'string') {
     throw new Error('Email id not correct')
   }
-  if (typeof username !== 'text'|| username.length < 2) {
+  if (typeof username !== 'string'|| username.length < 1) {
     throw new Error('username name not correct')
   }
-  if (typeof password !== 'text' || password.length<4){
+  if (typeof password !== 'string' || password.length<1){
     throw new Error('password not valid')      
   }
    try {
