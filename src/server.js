@@ -7,7 +7,10 @@ const passport = require('./auth/passport')
 const app = express()
 
 app.set("view engine", "hbs")
+//app.engine('html', require('hbs').__express);
 app.set('views', path.join(__dirname, '../views'))
+
+app.use('/' , express.static(path.join(__dirname, '../public')))
 
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))
@@ -29,4 +32,4 @@ app.use(passport.session())
 
 app.use('/', require('./routes/pages'))
 
-app.listen(2122, ()=>console.log("website on http://localhost:2121"))
+app.listen(2122, ()=>console.log("website on http://localhost:2122"))

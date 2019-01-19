@@ -1,5 +1,6 @@
 const route = require('express').Router()
 const passport = require('passport')
+const path = require('path')
 const  Createsiteuser  = require('../../controllers/siteusers').createsiteuser
 
 route.get('/login', (req, res) => {
@@ -23,16 +24,10 @@ route.post('/signup', async (req, res) => {
 )
 
 route.get('/mainpage',(req,res)=>{
-  res.render('pages/mainpage')
+  res.sendFile(path.join(__dirname, '../../../public/mainpage.html'))
 })
 
-//route.post('/login', (req,res) => {
-  // console.log("sfsf");
-  // passport.authenticate('local', {
-  // failureRedirect: '/',
-  // successRedirect: '/mainpage'
-  //res.render('pages/mainpage')
-//})})
+
 
 route.post('/login', passport.authenticate('local', {
   failureRedirect: '/auth/login',

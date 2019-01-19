@@ -9,19 +9,120 @@
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
+    <style>
+        *{
+    // background-color: linen; 
+   
+ }
+ input{
+     width:50%;
+     padding: 12px 20px;
+     margin: 8px 0;
+     box-sizing: border-box;
+     border: 2px solid black;
+     border-radius: 4px;
+     background-color:lightsteelblue;
+ }
+ input:focus{
+     background-color:darkorange;
+ }
+ input[type=checkbox]
+ {
+     padding:-10px;
+     margin:-10px;
+     width:5%;
+ }
+ input[type=file]
+ {
+     padding:-10px;
+     margin:-10px;
+     width:200px;
+     height:50px;
+ }
+ input[type=radio]
+ {
+     padding:-10px;
+     margin:-10px;
+     width:5%;
+ 
+ }
+ div.first {
+    position: sticky;
+    text-align:center;
+     background-color: black;
+     color:white;
+     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+     font-size: large;
+     margin:0px;
+     padding:10px;
+ }
+ select {
+     width: 50%;
+     padding: 16px 20px;
+     border: 1px solid black;
+     border-radius: 4px;
+     background-color: #f1f1f1;
+ }
+ div.img{
+     background-color: lightgoldenrodyellow;
+     margin:0 100px;
+     padding:10px;
+     //opacity:0.2;
+    // background-color: gray;
+ }
+ input[type=button], input[type=submit], input[type=reset] {
+     background-color: #4CAF50;
+     border: none;
+     color: white;
+     padding: 16px 32px;
+     text-decoration: none;
+     margin: 4px 2px;
+     cursor: pointer;
+     width:10%;
+ }
+ div.form{
+    
+     color:black;
+     text-align: center;
+     margin:0px;
+     padding:0px;
+    // opacity: 1;
+     border: 20 px solid yellow;
+ }
+ 
+ body{
+     background-image:url('bg1.jpeg');
+ }
+    </style>
 </head>
 <body>
-    <div class="container" >
-        <form method="POST" action="login">
+    
+        <!-- <form method="POST" action="login">
         <label for="username">Username:</label>
         <input type="text" class="form-control" name="username">
         <label for="password">Password:</label>
-        <input type="password" class="form-control" name="password">
+        <input type="password" class="form-control" name="password"> -->
 
-         <button type="submit" class="btn btn-primary mt-5 mr-sm-2" >Submit</button>
+        <div class= "first" align="center">
+                <h2>BRILLIANT TEACHING POINT </h2>
+                  
+                  PARAM PURI UTTAM NAGAR NEW DELHI-110059
+                  </div>
+
+        <div class="img" style=" background-image:url('bg1.jpeg');">
+         <div class="form">
+        <form method="POST" action="login">
+        <h3>USERNAME</h3><input type="text" placeholder="username" name="username">
+        <h3>PASSWORD</h3><input type="text" placeholder="password" name="password">
+
+        <p align="center">
+                <input style="height:60px ;width:500px; " type="submit" value="Submit Form">
+                </p>    
 
         </form>
-    </div>
+        </div>
+        </div>
+    
     
 </body>
 </html>
